@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>catalogo_husqvarna</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script>
+	var imgTotales = 3; // Configura aquí la cantidad de imágenes
+	var imgActual = 1;
+	function cambiaImg() {
+    if (imgActual++ < imgTotales) {
+        imgActual = imgActual++;
+    } else {
+        imgActual = 1;
+    }
+    document.getElementById("dis").style.background="url("+imgActual+".jpg?id=20151116) no-repeat center top";
+	}
+</script>
+
+<style>
+  
+	body {background:#fff;}
+	body, html {height: 100%;}
+	* {margin:0;outline:none;padding:0;}
+
+	#dis {
+		background:url(1.jpg?id=20151116) no-repeat center top;
+		display:block;
+		height:3000px;
+		min-width:1200px;
+		width:100%;
+		/*Si quieres que la imagen se adapte al ancho de la ventana del navegador, descomenta las dos lineas de abajo*/
+
+		/*-webkit-background-size: contain !important;
+		background-size: contain !important;*/
+	}
+
+</style>
+</head>
+<body>
+
+  <a href="javascript:cambiaImg()" id="dis"></a>
+
+</body>
+</html>
